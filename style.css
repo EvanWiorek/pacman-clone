@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', monospace;
+}
+
+body {
+    background-color: black;
+}
+
+.row div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.brick{
+    background-color: rgb(0, 0, 198);
+}
+
+.coin {
+    background-image: url("./assets/coin.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+}
+
+.cherry {
+    background-image: url("./assets/cherry.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+#pacman {
+    background-image: url("./assets/pacman.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
+#red-ghost {
+    background-image: url("./assets/red-ghost.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+#orange-ghost {
+    background-image: url("./assets/orange-ghost.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+#pink-ghost {
+    background-image: url("./assets/pink-ghost.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.empty {
+    background-color: black;
+}
+
+.score {
+    margin-top: 20px;
+    color: white;
+}
