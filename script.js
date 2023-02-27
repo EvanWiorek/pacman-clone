@@ -111,6 +111,7 @@ function displayScore() {
 }
 
 function pacmanMove(e) {
+    var pacmanDeathSound = document.getElementById("pacman-death-sound"); 
     if(e.keyCode == 37 && world[pacman.y][pacman.x-1] != 2) {//left
         pacman.x --;
         document.getElementById('pacman').style.transform = 'rotate(180deg)';
@@ -139,11 +140,17 @@ function pacmanMove(e) {
         displayWorld();
         displayScore();
     }
-    // if(world[pacman.y][pacman.x] == world[redGhost.y][redGhost.x])  {
-    //     document.getElementById('pacman').remove();
-    //     displayRedGhost();
-    //     displayPacman();
-    // }
+    if(pacman.y == redGhost.y && pacman.x == redGhost.x)  {
+        document.getElementById('red-ghost').innerHTML = "<div class='empty2'></div>";
+        document.getElementById('orange-ghost').remove();
+        document.getElementById('pink-ghost').remove();
+        // pacmanDeathSound.play();
+        document.getElementById('pacman').style.transform = 'rotate(0deg)';
+        document.getElementById('pacman').innerHTML = '<div id="pacman-death"></div>';
+        console.log("death");
+        displayRedGhost();
+        displayPacman();
+    }
     displayPacman();
 }
 
@@ -152,3 +159,5 @@ function logKeyCode(e) {
 }
 
 addEventListener("keydown", pacmanMove);
+
+'<div id="pacman-death"></div>'

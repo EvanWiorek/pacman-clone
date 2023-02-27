@@ -8,16 +8,19 @@
 
 body {
     background-color: black;
+    z-index: 0;
 }
 
 .row div {
     width: 20px;
     height: 20px;
     display: inline-block;
+    z-index: 0;
 }
 
 .brick{
     background-color: rgb(0, 0, 198);
+    z-index: 0;
 }
 
 .coin {
@@ -25,6 +28,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30%;
+    z-index: 0;
 }
 
 .cherry {
@@ -32,6 +36,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 90%;
+    z-index: 0;
 }
 
 #pacman {
@@ -42,7 +47,7 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
 }
 
 #red-ghost {
@@ -53,6 +58,7 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
+    z-index: 1;
 }
 
 #orange-ghost {
@@ -63,6 +69,7 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
+    z-index: 1;
 }
 
 #pink-ghost {
@@ -73,13 +80,30 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
+    z-index: 1;
 }
 
 .empty {
     background-color: black;
+    z-index: 0;
+}
+.empty2 {
+    background-color: black;
+    z-index: 0;
 }
 
 .score {
     margin-top: 20px;
     color: white;
+}
+
+#pacman-death {
+    background-image: url("./assets/pacman-death.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 3;
 }
