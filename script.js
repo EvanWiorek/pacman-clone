@@ -51,9 +51,20 @@ var pinkGhost = {
     y: 11
 };
 
+var restartDiv = document.querySelector("#restart");
+
+
+function startMusic() {
+    var pacmanStart = document.getElementById("pacman-start");
+    pacmanStart.volume = 0.2;
+    pacmanStart.play();
+} 
+
+startMusic();
+
 function displayWorld() {
     var output = "";
-    
+
     for(var i=0; i<world.length; i++)   {
         output += "\n<div class='row'>";
         for(var j=0; j<world[i].length; j++)   {
@@ -144,12 +155,13 @@ function pacmanMove(e) {
         document.getElementById('red-ghost').innerHTML = "<div class='empty2'></div>";
         document.getElementById('orange-ghost').remove();
         document.getElementById('pink-ghost').remove();
-        // pacmanDeathSound.play();
+        pacmanDeathSound.volume = 0.1;
+        pacmanDeathSound.play();
         document.getElementById('pacman').style.transform = 'rotate(0deg)';
         document.getElementById('pacman').innerHTML = '<div id="pacman-death"></div>';
-        console.log("death");
         displayRedGhost();
         displayPacman();
+        restartDiv.innerHTML = `<button class="restart" onclick="location.reload()">try again</button>`;
     }
     displayPacman();
 }
