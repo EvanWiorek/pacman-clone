@@ -83,6 +83,17 @@ body {
     z-index: 1;
 }
 
+#blue-ghost {
+    background-image: url("./assets/blue-ghost.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
 .empty {
     background-color: black;
     z-index: 0;
